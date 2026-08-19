@@ -343,6 +343,33 @@ body {
   border-radius: 50%;
 }
 
+/* nested sub-lists */
+.team ul ul {
+  margin-top: 0.3rem;
+  margin-bottom: 0.15rem;
+  padding-right: 0.6rem;
+}
+
+.team ul ul li {
+  font-size: clamp(0.67rem, 1.8vw, 0.73rem);
+  color: #4a5568;
+  padding-right: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.team ul ul li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0.42rem;
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border: 1.5px solid #7a8fa6;
+  border-radius: 1px;
+  transform: rotate(45deg);
+}
+
 .team li .em {
   color: var(--navy);
   font-weight: 600;
@@ -416,62 +443,306 @@ body {
   }
 
   .section-label {
-    font-size: 0.82rem;
-    gap: 0.35rem;
+    font-size: 0.8rem;
+    gap: 0.3rem;
+    margin-bottom: 0.6rem;
   }
 
   .team {
-    padding: 0.65rem 0.75rem;
+    padding: 0.6rem 0.7rem;
+  }
+
+  .team-head {
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+    padding-bottom: 0.4rem;
   }
 
   .team li {
     padding-right: 0.7rem;
-    font-size: 0.68rem;
+    font-size: 0.67rem;
+    margin-bottom: 0.28rem;
+  }
+
+  .team ul ul li {
+    font-size: 0.62rem;
   }
 
   .footer {
-    padding: 0.65rem 0.5rem;
-    gap: 0.5rem;
+    padding: 0.6rem 0.5rem;
+    gap: 0.4rem;
   }
 
   .footer .fname {
-    font-size: 0.68rem;
+    font-size: 0.67rem;
+  }
+
+  .footer .fcoordinator {
+    font-size: 0.58rem;
   }
 }
 
 @media (max-width: 280px) {
   body {
-    padding: 0.25rem;
+    padding: 0.22rem;
   }
 
-  .header-logo {
-    height: 1.1rem;
-    max-width: 3.25rem;
+  .header {
+    padding: 0.6rem 0.45rem 0.5rem;
   }
 
-  .header h1 {
-    font-size: 0.9rem;
-  }
-
-  .header h2 {
-    font-size: 0.6rem;
+  .eyebrow {
+    font-size: 0.55rem;
+    margin-bottom: 0.3rem;
   }
 
   .eyebrow .dash {
-    width: 12px;
+    width: 10px;
+  }
+
+  .header-logo {
+    height: 1rem;
+    max-width: 2.9rem;
+  }
+
+  .header h1 {
+    font-size: 0.85rem;
+  }
+
+  .header h2 {
+    font-size: 0.56rem;
+    margin-top: 0.15rem;
+  }
+
+  .houses {
+    gap: 0.15rem;
+    margin-top: 0.5rem;
+  }
+
+  .house svg {
+    width: 1rem;
+    height: 0.9rem;
+  }
+
+  .body {
+    padding: 0.55rem 0.4rem;
+  }
+
+  .section-label {
+    font-size: 0.73rem;
   }
 
   .core-msg {
-    padding: 0.65rem 0.75rem;
-    font-size: 0.68rem;
+    padding: 0.55rem 0.65rem;
+    font-size: 0.63rem;
+    border-right-width: 2.5px;
+  }
+
+  .teams {
+    gap: 0.55rem;
+    margin-top: 0.8rem;
+  }
+
+  .team {
+    padding: 0.55rem 0.6rem;
   }
 
   .team-name-ar {
-    font-size: 0.78rem;
+    font-size: 0.73rem;
   }
 
   .team-name-en {
+    font-size: 0.54rem;
+  }
+
+  .team li {
+    font-size: 0.63rem;
+    padding-right: 0.65rem;
+    margin-bottom: 0.22rem;
+  }
+
+  .team ul ul li {
     font-size: 0.58rem;
+  }
+
+  .footer {
+    padding: 0.55rem 0.45rem;
+    gap: 0.35rem;
+    font-size: 0.56rem;
+  }
+
+  .footer .fname {
+    font-size: 0.62rem;
+  }
+
+  .footer .fcoordinator {
+    font-size: 0.52rem;
+  }
+
+  .footer .fbar span {
+    width: 0.45rem;
+    height: 0.45rem;
+  }
+}
+
+@media (max-width: 240px) {
+  body {
+    padding: 0.12rem;
+  }
+
+  .header {
+    padding: 0.45rem 0.32rem 0.38rem;
+  }
+
+  .eyebrow {
+    font-size: 0.48rem;
+    gap: 3px;
+    margin-bottom: 0.2rem;
+  }
+
+  .eyebrow .dash {
+    width: 8px;
+  }
+
+  .header-logo {
+    height: 0.82rem;
+    max-width: 2.4rem;
+  }
+
+  .header h1 {
+    font-size: 0.75rem;
+  }
+
+  .header h2 {
+    font-size: 0.5rem;
+    margin-top: 0.1rem;
+  }
+
+  .houses {
+    gap: 0.1rem;
+    margin-top: 0.35rem;
+  }
+
+  .house svg {
+    width: 0.85rem;
+    height: 0.75rem;
+  }
+
+  .body {
+    padding: 0.42rem 0.3rem;
+  }
+
+  .section-label {
+    font-size: 0.65rem;
+    gap: 0.18rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .details .k,
+  .details .v {
+    font-size: 0.58rem;
+    padding: 0.28rem 0.28rem;
+  }
+
+  .details .k {
+    width: 3.25rem;
+  }
+
+  .core-msg {
+    font-size: 0.57rem;
+    padding: 0.4rem 0.5rem;
+    border-right-width: 2px;
+    margin-top: 0.6rem;
+    line-height: 1.6;
+  }
+
+  .section-label--spaced {
+    margin-top: 0.8rem;
+  }
+
+  .teams {
+    gap: 0.42rem;
+    margin-top: 0.6rem;
+  }
+
+  .team {
+    padding: 0.42rem 0.48rem;
+  }
+
+  .team-head {
+    gap: 0.35rem;
+    margin-bottom: 0.3rem;
+    padding-bottom: 0.3rem;
+  }
+
+  .team-icon {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+
+  .team-name-ar {
+    font-size: 0.64rem;
+  }
+
+  .team-name-en {
+    font-size: 0.46rem;
+    margin-top: 0.08rem;
+  }
+
+  .team li {
+    font-size: 0.57rem;
+    padding-right: 0.58rem;
+    margin-bottom: 0.18rem;
+    line-height: 1.38;
+  }
+
+  .team li::before {
+    width: 4px;
+    height: 4px;
+    top: 0.36rem;
+  }
+
+  .team ul ul {
+    padding-right: 0.4rem;
+    margin-top: 0.2rem;
+  }
+
+  .team ul ul li {
+    font-size: 0.53rem;
+    padding-right: 0.62rem;
+    margin-bottom: 0.14rem;
+  }
+
+  .team ul ul li::before {
+    width: 3.5px;
+    height: 3.5px;
+    top: 0.33rem;
+  }
+
+  .footer {
+    padding: 0.42rem 0.32rem;
+    gap: 0.25rem;
+    font-size: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer .fname {
+    font-size: 0.54rem;
+  }
+
+  .footer .fcoordinator {
+    font-size: 0.46rem;
+    margin-top: 0.1rem;
+  }
+
+  .footer .fbar {
+    gap: 0.2rem;
+  }
+
+  .footer .fbar span {
+    width: 0.32rem;
+    height: 0.32rem;
   }
 }
 
@@ -567,17 +838,17 @@ body {
   }
 
   .section-label--spaced {
-    margin-top: 4.5mm;
+    margin-top: 3.5mm;
   }
 
   .details .k,
   .details .v {
-    padding: 2.6mm 4mm;
-    font-size: 8.6pt;
+    padding: 2.2mm 3.5mm;
+    font-size: 8.4pt;
   }
 
   .details .k {
-    width: 32mm;
+    width: 30mm;
   }
 
   .details .row {
@@ -590,57 +861,78 @@ body {
   }
 
   .core-msg {
-    margin-top: 3.5mm;
+    margin-top: 3mm;
     border-right-width: 2.6px;
-    padding: 3mm 5mm;
-    font-size: 8.8pt;
+    padding: 2.5mm 4.5mm;
+    font-size: 8.5pt;
+    line-height: 1.65;
   }
 
   .teams {
-    margin-top: 4.5mm;
+    margin-top: 3.5mm;
     grid-template-columns: 1fr 1fr;
-    gap: 3.5mm 4mm;
+    gap: 2.8mm 3.5mm;
   }
 
   .team {
-    padding: 3mm 4mm;
+    padding: 2.5mm 3.5mm;
   }
 
   .team-head {
-    gap: 2.5mm;
-    margin-bottom: 2mm;
-    padding-bottom: 1.8mm;
+    gap: 2mm;
+    margin-bottom: 1.5mm;
+    padding-bottom: 1.5mm;
   }
 
   .team-icon {
-    width: 6.5mm;
-    height: 6.5mm;
+    width: 6mm;
+    height: 6mm;
   }
 
   .team-icon svg {
-    width: 3.8mm;
-    height: 3.8mm;
+    width: 3.5mm;
+    height: 3.5mm;
   }
 
   .team-name-ar {
-    font-size: 9.6pt;
+    font-size: 9pt;
   }
 
   .team-name-en {
-    font-size: 6.6pt;
-    margin-top: 0.3mm;
+    font-size: 6.2pt;
+    margin-top: 0.2mm;
   }
 
   .team li {
-    padding-right: 3.2mm;
-    font-size: 7.3pt;
-    margin-bottom: 1.2mm;
+    padding-right: 3mm;
+    font-size: 6.9pt;
+    line-height: 1.35;
+    margin-bottom: 0.9mm;
   }
 
   .team li::before {
-    top: 1.9mm;
-    width: 1.5mm;
-    height: 1.5mm;
+    top: 1.7mm;
+    width: 1.4mm;
+    height: 1.4mm;
+  }
+
+  .team ul ul {
+    padding-right: 1.5mm;
+    margin-top: 0.5mm;
+    margin-bottom: 0;
+  }
+
+  .team ul ul li {
+    font-size: 6.2pt;
+    padding-right: 3.2mm;
+    margin-bottom: 0.6mm;
+    line-height: 1.3;
+  }
+
+  .team ul ul li::before {
+    top: 1.5mm;
+    width: 1.3mm;
+    height: 1.3mm;
   }
 
   .footer {
